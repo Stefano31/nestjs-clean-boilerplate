@@ -4,6 +4,7 @@
 
 # Cache
 .npm
+.cache
 
 # Logs
 logs

@@ -5,6 +5,13 @@
   "author": "Stefano Giurgiano",
   "private": true,
   "license": "MIT",
+  "ts-standard": {
+    "ignore": [
+      "dist",
+      "node_modules",
+      ".npm"
+    ]
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build $1",
@@ -13,7 +20,7 @@
     "start:debug": "npm run start:dev $1 -- --debug 0.0.0.0:9229",
     "start:prod": "sh() { node dist/apps/$1/main; };sh",
     "lint:fix": "npm run lint:check -- --fix",
-    "lint:check": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:check": "ts-standard",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
