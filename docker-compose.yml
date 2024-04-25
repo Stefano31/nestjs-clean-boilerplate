@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+    app-one:
+        build:
+            context: .
+            dockerfile: .docker/node/dev/Dockerfile
+        volumes:
+            - ./:/home/node
+        env_file:
+            - ./apps/app-one/dev.env
+        command: bash -c "npm i && npm run start:debug app-one"
+        ports:
+            - 3000:3000
+            - 9229:9229
+            - 9230:9230
