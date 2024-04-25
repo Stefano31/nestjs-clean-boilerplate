@@ -26,14 +26,15 @@ Production ready boilerplate, nothing else to think.
 This boilerplate aims to offer every that you need to start develop following best practices:
 - Clean architecture
 - Optimaized (release image)[.docker/node/release/Dockerfile] for NodeJS.
-- [commit linter](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) with [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) 
+- Code quality check:
+  - Style guide, linter, and formatter using [ts-standard](https://github.com/standard/ts-standard)
+  - Find unused files, dependencies and exports using [knip](https://knip.dev/)
+- [commit linter](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) with [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)
 - VSCode debugger enabled attaching applications and tests.
 - [SWC](https://swc.rs/) fast compiler
-- Style guide, linter, and formatter using [ts-standard](https://github.com/standard/ts-standard)
 - [Zod](https://zod.dev/) schema declaration and validation library
 
 ## Next features
-- Find unused files, dependencies and exports using [knip](https://knip.dev/)
 - Replace standard logger with [PinoJS](https://github.com/pinojs/pino)
 - Add telemetry throught [OpenTelemetry](https://opentelemetry.io/)
 - Use [CorePack](https://nodejs.org/docs/latest-v20.x/api/corepack.html)

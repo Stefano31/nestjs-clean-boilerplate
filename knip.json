@@ -1,0 +1,25 @@
+{
+  "entry": ["apps/**/main.{js,ts}", "src/main.{js,ts}"],
+  "project": ["**/*.{js,ts}"],
+  "commitlint": {
+    "config": [
+      ".commitlintrc",
+      ".commitlintrc.{json,yaml,yml,js,cjs,ts,cts}",
+      "commitlint.config.{js,cjs,ts,cts,mjs}",
+      "package.json"
+    ]
+  },
+  "webpack": true,
+  "jest": {
+    "config": [
+      "jest.config.{js,ts,mjs,cjs,json}",
+      "package.json"
+    ],
+    "entry": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)",
+      "**/*.e2e-spec.ts"
+    ]
+  },
+  "ignoreDependencies": ["@types/jest", "@nestjs/schematics", "source-map-support", "ts-jest", "ts-loader"]
+}
